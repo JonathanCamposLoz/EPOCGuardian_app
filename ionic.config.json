@@ -1,0 +1,7 @@
+{
+  "name": "EPOC_SEGURO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
