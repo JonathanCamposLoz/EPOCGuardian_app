@@ -24,3 +24,27 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+
+  // Cambiar color de texto a blanco
+  ion-label, ion-text {
+    color: white;
+  }
+  
+  // Cambiar color de los iconos
+  ion-icon {
+    color: black;
+  }
+
+  ion-app {
+    height: 100vh; // Asegura que ion-app ocupe el 100% de la altura de la ventana gráfica
+    background-color: black; // Establece el fondo negro
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  ion-content {
+    --background: transparent; // Hace que el fondo de ion-content sea transparente
+    height: 100%; // Asegura que ion-content ocupe el 100% de la altura del contenedor (ion-app)
+  }
