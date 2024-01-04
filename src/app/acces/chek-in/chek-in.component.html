@@ -1,0 +1,126 @@
+<div class="row" style="padding-top: 50px;">
+  <div class="col" style="text-align: center;">
+    <img src="../../assets/icon/Logo Epoc Seguro.png">
+  </div>
+</div>
+
+<div class="row" style="padding-top: 10px;">
+  <div class="col-1">
+
+  </div>
+  <div class="col-10" style="text-align: center;">
+
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <ion-item style="border-radius: 10px;">
+            <ion-label><ion-icon name="document" class="icon-cat"></ion-icon>Tipo de Documento</ion-label>
+            <ion-select [(ngModel)]="selectedOption" (ionChange)="selectOption($event)" name="documentType">
+              <ion-select-option *ngFor="let option of options" [value]="option">
+                {{ option }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+    </div>
+  </div>
+  
+      <div class="row" style="padding-top: 40px;">
+        <div class="col">
+
+      <ion-item style=" border-radius: 10px; ">
+      <ion-label>
+        <ion-icon name="person-outline" class="icon-cat"></ion-icon>
+      </ion-label>
+      <ion-input placeholder="Numero de Documento"></ion-input>
+    </ion-item>
+        </div>
+      </div>
+
+    <div class="row" style="padding-top: 40px;">
+      <div class="col">
+        <ion-item style="border-radius: 10px;">
+          <ion-input labelPlacement="stacked" placeholder="contraseña">
+            <ion-icon slot="start" name="lock-closed" aria-hidden="true" class="icon-cat"></ion-icon>
+          </ion-input>
+          
+            <ion-button fill="clear" slot="end" aria-label="Show/hide">
+              <ion-icon class="icon-cat" slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-item>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 40px;">
+      <div class="col">
+        <p class="text_instrucction">
+          <ion-icon name="checkmark-circle-outline" class="icon-cat"></ion-icon> Minúsculas y Mayúsculas <br>
+          <ion-icon name="checkmark-circle-outline" class="icon-cat"></ion-icon> Número (0-9) <br>
+          <ion-icon name="checkmark-circle-outline" class="icon-cat"></ion-icon> Carácter especial () <br>
+          <ion-icon name="checkmark-circle-outline" class="icon-cat"></ion-icon> Al menos 10 caracteres <br>
+      </p>
+
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 40px;">
+      <div class="col">
+        <ion-item style=" border-radius: 10px;">
+          <ion-input labelPlacement="stacked" placeholder="Confirmación Contraseña">
+            <ion-icon slot="start" name="lock-closed" aria-hidden="true" class="icon-cat"></ion-icon>
+          </ion-input>
+          
+            <ion-button fill="clear" slot="end" aria-label="Show/hide">
+              <ion-icon class="icon-cat" slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-item>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 40px;">
+      <div class="col">
+
+        <div class="row">
+          <div class="col" style="text-align: right;">
+            <label class="text_instrucction"><b>Terminos y Condiciones </b></label>
+          </div>
+          <div class="col" style="text-align: left;">
+            <ion-checkbox class="label_forgotPass_blue"><b> Aceptar</b></ion-checkbox>    
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col" style="text-align: right;">
+            <label class="text_instrucction"><b>Politicas de privacidad </b></label>
+          </div>
+          <div class="col" style="text-align: left;">
+            <ion-checkbox class="label_forgotPass_blue"><b> Aceptar</b></ion-checkbox>    
+          </div>
+        </div>
+         
+      </div>
+    </div>
+
+    </form>
+
+
+
+  <div class="row" style="padding-top: 40px;padding-bottom: 30px;">
+    <div class="col">
+      <button class="custom-button-login" >
+      CONTINUAR
+      </button>
+    </div>
+  </div>
+
+
+ 
+
+  </div>
+  <div class="col-1">
+  </div>
+</div>
+
+
+
+
+

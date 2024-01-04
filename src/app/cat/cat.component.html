@@ -1,0 +1,79 @@
+<ion-header class="mt-4">
+  <ion-toolbar>
+    <ion-title>
+      Encuesta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class="row mt-2">
+    <div class="col" style="text-align: center;">
+      <img src="../../assets/icon/Logo Epoc Seguro.png">
+    </div>
+  </div>
+
+  <div class="row" style="padding: 4px;">
+    <div class="col">
+      <label class="label_question mt-4">
+        {{ pointer_question + 1 }}. 
+        {{ question }}</label>         
+    </div>
+  </div>
+ 
+
+<div class="row mt-4">
+  <div class="col" class="card-with-border" >
+    <ion-radio-group 
+    [(ngModel)]="selectedOption" 
+    (ionChange)="seleccionarRespuesta($event.detail.value)">
+      <ion-card-content>
+            <div class="row" *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]">
+              <div class="col-6" style="text-align: right;">
+                <ion-label class="label_answer">{{ i }}</ion-label>
+              </div>
+              <div class="col-6" style="text-align: left;">
+                <ion-radio [value]="i" class="custom-radio label_answer"></ion-radio>
+              </div>
+            </div>
+      </ion-card-content>
+    </ion-radio-group>
+  </div>
+</div>
+
+
+
+  <div class="row mt-2">
+    <!--
+    <div class="col-6" style="text-align: right;">
+      <ion-button (click)="before_question()" *ngIf="pointer_question != 0">
+        ANTERIOR
+      </ion-button>
+    </div>
+    -->
+    <div class="col-12" style="text-align: center;">
+      
+      <button class="custom-button" 
+      (click)="advance_question()" 
+      *ngIf="is_advance">
+        SIGUIENTE
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-2" *ngIf="is_sent">
+    <div class="col">
+      <button class="custom-button-sent" 
+      (click)="presentAlert()">
+      ENVIAR
+      </button>
+    </div>
+  </div>
+ 
+
+
+</ion-content>
+
+
